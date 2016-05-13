@@ -12,35 +12,26 @@
 //Writing the current time in the webpage 
 
 var greeting; 
+
 var nowDate = new Date(); 
 var nowHour = nowDate.getHours(); 
 var nowMinute = nowDate.getMinutes(); 
 var nowSecond = nowDate.getSeconds(); 
 
-if (nowMinute < 10 ) {
-	nowMinute = " 0 " + nowMinute; 
+if (nowMinute < 10) {
+	nowMinute = "0" + nowMinute; 
 }
 
 if (nowSecond < 10) {
-
-	nowSecond = " 0 " + nowSecond; 
+	nowSecond = "0" + nowSecond; 
 }
 
 if (nowHour < 12) {
-	greeting = " Good Morning"; 
-} else if( nowHour < 17) {
+	greeting = "Good Morning"; 
+} else if ( nowHour < 17) { greeting = "Good Afternoon"; }
+else { greeting = "Good Evening"; }
 
-	greeting = " Good Afternoon"; 
-} else {
-	greeting = "Good Evening"; 
-}
-
-document.write(" <h4> " + greeting + " Welcome to Word Genie" + " <br/> "); 
-document.write(" According to your clock the time is: " + " <br/> "); 
-
-document.write(nowHour  + ":" + nowMinute + ":" + nowSecond); 
-
-document.write("First Commit file in this new github account"); 
-
+document.write(" <h4> " + greeting + " , welcome to my website"); 
+document.write(" The time is now: " + nowHour + ":" + nowMinute + ":" + nowSecond); 
 </script> 
 </body> 

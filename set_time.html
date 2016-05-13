@@ -1,0 +1,23 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+
+var nowDate = new Date(); 
+// with 23 hours and 64 minutes, the date will roll to the next day. 
+nowDate.setHours(23); 
+nowDate.setMinutes(57); 
+alert(nowDate); 
+
+//with 64 minutes, it rolls back to the next hour. 
+
+nowDate.setMinutes(64); 
+alert(nowDate); 
+</script> 
+</body> 
