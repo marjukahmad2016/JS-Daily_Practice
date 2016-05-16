@@ -1,0 +1,42 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+//Checking if a passphrase only contains letters and numbers 
+
+var passphrase = prompt("Please enter a passphrase.", " "); 
+
+function isValid(text) {
+
+	var myRegExp = /[^a-z\d ]/i; // case insensitive (i); I want to match any character that is not between a to z, not between digits, or not case sensitive; 
+   return myRegExp.test(text); // returns true when any invalid character found and returns false when any invalid characters are not found; 
+
+}
+
+if (isValid(passphrase)) { // true
+	document.write("input contains invalid character"); 
+} else { 
+	document.write(" input contains valid characers"); 
+}
+
+
+// [^] this means you want to match any character that is not specified within the square bracket --- catch any outside character not within the square bracket. 
+//[^a-z] your regular expression matches any character that is not between a to z
+// [^a-z]/i -- you have just made the filtering a lot easier -- with making it case insensitive 
+// [^a-z\d ]/i --- you have just allowed digits and characters from a to z, making it case insensitive, also you have allowed spce which means anything other than a to z, digits, and space will be rendered invalid 
+
+//myRegExp.test(text) === true ( returning true means it caught an illegal passphrase ); 
+//isValid -- yes or no -- yes means no illegal characters 
+// no means -- illegal characters found 
+
+
+
+
+</script> 
+</body> 
