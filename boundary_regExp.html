@@ -1,0 +1,24 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+//Putting a boundary between words 
+
+var myString = " Putting a boundary between each of the words"; 
+
+var myRegExp = /\b/g; 
+myString = myString.replace(myRegExp, " | ");
+alert(myString);  
+
+
+
+
+
+</script> 
+</body> 
