@@ -1,0 +1,34 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+//Regular Expression -- checking if the the valid character exists in a string in a "regular" way, other then regular expression way
+
+
+function isValid2(text){
+	var returnValue = true;
+	var validChars =  "abcdefghijklmnopqrstuvwxyz0123456789"; 
+
+	for (var charIndex = 0; charIndex < text.length; charIndex++) {
+
+		if (validChars.indexOf(text.charAt(charIndex).toLowerCase()) < 0) {
+			returnValue = false; 
+			break; 
+	}
+  }
+  return returnValue; 
+}
+
+
+document.write(isValid2("heelo")); 
+
+
+
+</script> 
+</body> 
