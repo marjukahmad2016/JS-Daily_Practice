@@ -10,15 +10,26 @@
 <script>
 //Putting a boundary between words 
 
-var myString = " Putting a boundary between each of the words"; 
+var myString = " Putting a boundary between each of the words,  009."; 
+
+var myString2 = " Putting a boundary between each of the words,  007."; 
+
 
 var myRegExp = /\b/g; 
 myString = myString.replace(myRegExp, " | ");
 alert(myString);  
 
+var myRegExp2 = /\B/g; 
+myString2 = myString2.replace(myRegExp2, " $ ");
+alert(myString2); 
 
 
 
+
+
+// \b -- this matches a word boundary, which is essentially the point between a word character and a non-word character. 
+
+// \B -- this matches a position that's not a word boundary. 
 
 </script> 
 </body> 
