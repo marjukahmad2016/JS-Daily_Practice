@@ -10,5 +10,24 @@
 <script>
 
 
+//Replacing a string  and searching a string 
+
+var myString = " The event will be in May, the 21st of June"; 
+
+var myCleanedUpString = myString.replace("May", "June"); 
+
+document.write(myCleanedUpString + " <br/> ");
+
+var my_second_string = " Beginning Javascript, Beginning Java, " + " Professional Javascript"; 
+
+document.write(my_second_string.search("Javascript"));  
+
+var my_match_array = "1997, 1998, 1999, 2000, 2001, 2002"; 
+
+var my_return_match_array  = my_match_array.match("19"); 
+
+alert(my_return_match_array); 
+
+
 </script> 
 </body> 

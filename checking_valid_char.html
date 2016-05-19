@@ -10,23 +10,19 @@
 <script>
 //Regular Expression -- checking if the the valid character exists in a string in a "regular" way, other then regular expression way
 
+function isValid2(text) {
 
-function isValid2(text){
-	var returnValue = true;
-	var validChars =  "abcdefghijklmnopqrstuvwxyz0123456789"; 
+	var returnValue = true; 
+	var validChars = "abcdefghijklmnopqrstuvwxyz0123456789"; 
 
 	for (var charIndex = 0; charIndex < text.length; charIndex++) {
-
-		if (validChars.indexOf(text.charAt(charIndex).toLowerCase()) < 0) {
+		if(validChars.indexOf(text.charAt(charIndex).toLowerCase()) < 0) {
 			returnValue = false; 
 			break; 
+		}
 	}
-  }
-  return returnValue; 
+	return returnValue; // false means the string is not valid == string containing invalid characters
 }
-
-
-document.write(isValid2("heelo")); 
 
 
 

@@ -1,0 +1,30 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+
+//Getting the understanding of timing right 
+
+var localTime = new Date(); 
+
+var html = "<p> UTC time is: " + localTime.toUTCString() + " </p>"; 
+html += "<p> The local date and time is: "  + localTime.toLocaleString() + " </p>"; 
+html += "<p> the time offset between UTC and the localtime is: " + localTime.getTimezoneOffset() + " </p> "; 
+html += "<p> Using toTimeString() gives: " + localTime.toTimeString() + " </p> "; 
+html += "<p> Using toLocaleDateString() gives: " + localTime.toLocaleDateString() + " </p> "; 
+html += "<p> Using toDateString() gives: " + localTime.toDateString() + " </p> "; 
+document.write(html);  
+
+
+
+
+
+
+</script> 
+</body> 
