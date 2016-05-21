@@ -1,0 +1,31 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+
+//Setting UTC timing 
+var myDate = new Date(); 
+myDate.setUTCHours(12); 
+myDate.setUTCMinutes(0); 
+myDate.setUTCSeconds(0); 
+
+var html = "<p>" +  myDate.toUTCString() + "</p>"; 
+html += "<p>" + myDate.toLocaleString() + "</p>"; 
+
+document.write(html); 
+
+
+
+
+
+
+
+
+</script> 
+</body> 
