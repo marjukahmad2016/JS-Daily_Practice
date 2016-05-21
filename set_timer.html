@@ -1,0 +1,38 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+<div id="output"> </div>
+
+
+
+<script>
+
+//Setting Timer 
+function doThisLater() {
+	alert("Time is up"); 
+}
+
+//var timerID = setTimeout(doThisLater, 3000); 
+
+
+//clearTimeout(timerID); if you want to clear the timer ID
+
+function updateScore() {
+
+	document.getElementById("output").innerHTML = new Date();
+
+}
+
+
+setInterval(updateScore, 1000); 
+
+
+
+
+
+</script> 
+</body> 
