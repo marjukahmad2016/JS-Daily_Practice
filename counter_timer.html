@@ -81,6 +81,9 @@ var deadline = "December 31 2016 23:59:59 GMT+06:00";
 
 function getTimeRemaining(endtime) {
 	var t = Date.parse(endtime) - Date.parse(new Date()); //The Date.parse() function is native JavaScript that converts a time string into a value in milliseconds.
+
+
+    // var deadline = new Date(Date.parse(new Date()) + 60 * 1000);// 60 seconds countdown clock
 	var seconds = Math.floor((t/1000) % 60); 
 	var minutes = Math.floor((t/1000/60) % 60); 
 	var hours = Math.floor((t/1000*60*60) % 24 ); 
