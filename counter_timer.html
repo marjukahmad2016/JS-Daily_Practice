@@ -1,14 +1,22 @@
 <!Doctype html> 
 <html lang="en"> 
 <head> 
-<title> chapter 2, example 2 </title> 
+<title> Real Madrid vs. Atletico Madrid </title> 
 <style> 
+
+html { 
+  background: url(background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body{
 	text-align: center;
-	background: #00ECB9;
   font-family: sans-serif;
   font-weight: 100;
-}
+}  
 
 h1{
   color: #396;
@@ -24,6 +32,8 @@ h1{
 	font-weight: 100;
 	text-align: center;
 	font-size: 30px;
+	margin-top: 8%;
+	margin-left: 5%;
 }
 
 #clockdiv > div{
@@ -50,7 +60,8 @@ h1{
 
 <div id="clockdiv">
 
-<h1>Countdown Clock</h1>
+<!-- <h1>Countdown Clock</h1>
+<h3> Real Madrid vs. Atletico Madrid </h3> --> 
 <div id="clockdiv">
   <div>
     <span class="days"></span>
@@ -77,7 +88,7 @@ h1{
 <script>
 // Building a countdown clock until it hits the deadline
 
-var deadline = "December 31 2016 23:59:59 GMT+06:00"; 
+var deadline = "May 29 2016 01:45:00 GMT+06:00"; 
 
 function getTimeRemaining(endtime) {
 	var t = Date.parse(endtime) - Date.parse(new Date()); //The Date.parse() function is native JavaScript that converts a time string into a value in milliseconds.
