@@ -1,0 +1,27 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+<script>
+//geolocation 
+
+function geoSuccess(position) {
+	var coords = position.coords; 
+	var latitude = coords.latitude; 
+	var longitude = coords.longitude; 
+
+	var message = "You're at " + latitude + " , " + longitude; 
+	alert(message); 
+} 
+
+function goError(errorObj) {
+	alert(errorObj.message); 
+}
+
+navigator.geolocation.getCurrentPosition(geoSuccess, goError); 
+</script> 
+</body> 
