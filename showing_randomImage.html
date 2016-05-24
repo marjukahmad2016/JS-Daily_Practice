@@ -1,0 +1,27 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title>  Browser output </title> 
+</head> 
+<body> 
+
+<img src=" " width="200" height="150" alt="MyImage"/> 
+
+<script>
+
+// generating a random number and showing a random image 
+
+function getRandomNumber(min, max) {
+	return Math.floor(Math.random() * max) + min; 
+}
+
+var MyImages = ["http://assets.rollingstone.com/assets/2016/article/taylor-swift-donates-250-000-to-kesha-after-court-ruling-20160222/229077/large_rect/1456112115/1401x788-GettyImages-486034356.jpg", "http://www.billboard.com/files/styles/article_main_image/public/media/taylor-swift-vmas-mtv-carpet-2015-billboard-650.jpg", "http://www.ew.com/sites/default/files/styles/tout_image_612x380/public/i/2014/10/29/taylor-swift_612x380_1.jpg?itok=OJwLBM42", "http://www.glamour.com/images/beauty/2016/02/taylor-swift-grammys-2016-bob-w724.jpg"]; 
+
+var random = getRandomNumber(0, MyImages.length); 
+
+document.images[0].src = MyImages[random]; 
+
+
+
+</script> 
+</body> 
