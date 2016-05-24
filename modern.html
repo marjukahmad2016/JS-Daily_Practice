@@ -1,0 +1,28 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title>  Browser output </title> 
+</head> 
+<body> 
+
+
+<script>
+
+//if (naiogator.geolocation) { // typeof navigator.geolocation == "undefined"-- it means lgacy browser
+
+	//location.replace("modern.html"); 
+
+//}
+
+if (navigator.geolocation) { // typeof navigator.geolocation !== "undefined"-- it means modern browser
+
+	location.replace("legacy.html"); 
+
+}
+
+
+
+
+
+</script> 
+</body> 
