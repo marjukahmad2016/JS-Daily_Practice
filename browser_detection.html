@@ -1,0 +1,61 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+
+
+<script>
+
+//checking different browsers
+
+function getBrowserName(){
+	var lsBrowser = navigator.userAgent; // you get the name of the browser by this line 
+	if(lsBrowser.indexOf("MSIE") >= 0){
+		return "MSIE"; 
+	} else if(lsBrowser.indexOf("Firefox") >= 0) {
+		return "Firefox";
+	}else if(lsBrowser.indexOf("Safari") >= 0) {
+		return "Safari"; 
+	}else if(lsBrowser.indexOf("Opera") >= 0) {
+		return "Opera"; 
+	} else {
+		return "UNKNOWN"; 
+	}
+}
+
+function getBrowserVersion() {
+	var ua = navigator.userAgent; // you get the name of the browser by this line 
+	var browser = getBrowserName(); 
+
+	var findIndex = ua.indexOf(browser) + browser.length + 1;
+
+	var browserVersion = parseFloat(ua.substring(findIndex, findIndex + 3)); 
+	//“You set findIndex to the character position of the browser name plus the length of the name, plus one. Doing this ensures you to get the character after the name and just before the version number. browserVersion is set to the floating-point value of that number, which you obtain using the substring() method. This selects the characters starting at findIndex and ending with the one before findIndex, plus three. This ensures that you just select three characters for the version number:”
+
+
+	return browserVersion; 
+}
+
+var browserName = getBrowserName(); 
+var browserVersion = getBrowserVersion(); 
+
+if(browserName == "MSFT") {
+	if(browserVersion < 9) {
+		document.write('Your version of IE is too old!'); 
+	} else {
+		document.write("Your version of IE is fully supported."); 
+	} 
+} else if (browserName == "Firefox") {
+	document.write('Your version of firefox is fully supported'); 
+} else if(browserName == "Safari") {
+	document.write(" Your version of Safari is fully supported"); 
+} else if( browserName == 'Chrome') {
+	document.write(" Chrome is fully supported"); 
+} else {
+	document.write(" Sorry this browser version is not supported"); 
+}
+</script> 
+</body> 
