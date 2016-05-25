@@ -1,0 +1,26 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> chapter 2, example 2 </title> 
+</head> 
+<body> 
+
+<h1 id= "heading1"> My Heading </h1>
+<p id="paragraph1"> This is some text in a paragraph </p>
+<script>
+//document element 
+
+var container = document.documentElement; 
+alert(container.tagName); // holds the outermost element which is tagName 
+
+var pElem = document.getElementById("paragraph1"); 
+pElem.setAttribute("align", "center"); //setting attribute 
+alert(pElem.getAttribute("align")); // getting attribute 
+
+pElem.removeAttribute("align"); //removing attribute 
+
+
+
+
+</script> 
+</body> 
