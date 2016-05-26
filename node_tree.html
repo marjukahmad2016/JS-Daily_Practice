@@ -2,9 +2,18 @@
 <html lang="en"> 
 <head> 
 <title> chapter 2, example 2 </title> 
+<style> 
+
+.newStyle {
+	text-decoration: italic;
+	color: blue;
+}
+</style>
 </head> 
 <body> 
 
+
+<div id="divAdvert"> Here is an advertisement </div>
 
 <script>
 var t = document.createTextNode("Hello World");
@@ -14,8 +23,9 @@ newElem.appendChild(t);
 
 document.body.appendChild(newElem); 
 
+var divAdvert = document.getElementById("divAdvert"); 
+divAdvert.className = "newStyle"; 
 
- 
 
 
 </script> 
