@@ -1,0 +1,32 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Event Handlers </title> 
+</head> 
+<body> 
+<img src="http://www.obsessionwithbutterflies.com/img/butterfly/monarch%20Caterpillar.jpg" onclick="changeImg(this)" /> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Forest_Tent_Caterpillar.jpg" onclick="changeImg(this)" />
+
+<p ondblclick="handle(event)"> paragraph </p> 
+
+<script>
+var myImages = [" http://www.animalfactguide.com/wp-content/uploads/2013/01/lion.jpg", "http://www.timeslive.co.za/incoming/2015/10/31/lion-thinkstock.jpg/ALTERNATES/crop_630x400/lion+thinkstock.JPG", "http://animaliaz-life.com/data_images/lion/lion5.jpg"]; 
+
+function changeImg(that) {
+	var randomNumber = Math.round(Math.random() * 3); 
+
+	while (that.src.indexOf(myImages[randomNumber]) !=  -1){// “The next lines are a while loop, the purpose of which is to ensure that you don’t select the same image as the current one. If the string contained in myImages[newImgNumber] is found inside the src property of the current image, you know it’s the same and that you need to get another random number. You keep looping until you get a new image, at which point myImages[newImgNumber] will not be found in the existing src, and -1 will be returned by the indexOf() method, breaking out of the loop”
+
+		randomNumber = Math.round(Math.random() * 3); 
+	}
+	that.src = myImages[randomNumber]; 
+}
+
+function handle(e) {
+	alert(e.type); 
+}
+
+
+</script> 
+</body> 
+ 

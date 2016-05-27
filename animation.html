@@ -18,29 +18,31 @@
 <div id="divAdvert"> Mindblowing </div>
 
 <script>
-var switchDirection = false; 
+
+var changeDirection = false; 
 
 function doAnimation(){
 	var div = document.getElementById("divAdvert"); 
-	var currentLeft = div.offsetLeft; 
-	var newLocation; 
+	var currentLeftPos = div.offsetLeft; 
+	var newPos; 
 
-	if (!switchDirection) {
-		newLocation = currentLeft + 2; 
-			if(currentLeft >= 400) {
-				switchDirection = true; 
-			}
+	if(!changeDirection) {
+		newPos = currentLeftPos + 2; 
+
+		if(currentLeftPos >= 400) {
+			changeDirection = true; 
+		}
 	} else {
-		newLocation = currentLeft - 2; 
-		if (currentLeft <= 0) {
-			switchDirection = false; 
+		newPos = currentLeftPos - 2; 
+
+		if (currentLeftPos <= 0) {
+			changeDirection = false;
 		}
 	}
-
-	div.style.left = newLocation + "px"; 
+	div.style.left = newPos + "px";
 }
 
-setInterval(doAnimation,10); 
+setInterval(doAnimation, 10); 
 </script>
 
 </body> 
