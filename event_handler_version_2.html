@@ -1,0 +1,32 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Different Type of Event Handling  </title> 
+</head> 
+<body> 
+
+<img src="usa.gif" onclick="changeImg(event)"/>
+<img src="canada.GIF" onclick="changeImg(event)"/>
+
+
+
+<script>
+
+//event handler version II
+
+var myImages = ["usa.gif", "canada.GIF", "jamaica.png", "mexico.png"]; 
+
+function changeImg(e){
+
+	var el = e.target; 
+
+    var randomNumber = Math.round(Math.random() * 3); 
+    el.src = myImages[randomNumber]; 
+}
+
+
+
+
+
+</script>
+</body> 

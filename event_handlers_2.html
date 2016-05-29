@@ -1,0 +1,16 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Event Handlers - 2 </title> 
+</head> 
+<body> 
+<p ondblclick="handle(event)"> Paragraph </p>
+<p onclick="handle(event)"> Paragraph 2 </p>
+<p onmouseover="handle(event)"> Paragraph 3 </p>
+<script>
+function handle(e){
+	if(e.type == "mouseover"){
+		alert("good job"); }
+}
+</script> 
+</body> 

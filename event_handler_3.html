@@ -1,0 +1,38 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Different Type of Event Handling  </title> 
+</head> 
+<body> 
+
+<img src="usa.gif" onclick="changeImg(this)"/>
+<img src="canada.GIF" onclick="changeImg(this)"/>
+
+
+
+<script>
+var myImages = ["usa.gif", "canada.GIF", "jamaica.png", "mexico.png"]; 
+
+function changeImg(el){
+
+    var randomNumber = Math.round(Math.random() * 3); 
+    el.src = myImages[randomNumber]; 
+}
+
+
+//function updateStatus(e){
+	//var el = e.srcElement; 
+//	var status = document.getElementById("status"); 
+//	status.innerHTML = " The image is changed to " + el.src; 
+
+//		if(el.src.indexOf("mexico") > -1){
+//			el.detachEvent("onclick", changeImg); 
+//			el.detachEvent("onclick", updateStatus); 
+//		}
+//}
+
+
+
+
+</script>
+</body> 
