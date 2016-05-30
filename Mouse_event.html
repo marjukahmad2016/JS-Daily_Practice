@@ -1,0 +1,47 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Mouse and Keyboard Event </title> 
+<style> 
+
+.underline {
+	color: red;
+	text-decoration: underline;
+}
+</style>
+</head> 
+<body> 
+<p> This is paragraph 1. </p>
+<p> This is paragraph 2. </p>
+<p> This is paragraph 3. </p>
+
+<div> Hello Testing! </div> 
+
+<script>
+
+function handleEvent(e) {
+	if (e.target.tagName == "P" || e.target.tagName == "DIV") {
+		if (e.type == "mouseover") {
+			e.target.className = "underline"; 
+		} else if( e.type == "mouseout") {
+			e.target.className = ""; 
+		}
+	}
+
+	if (e.target.type == "click") {
+		alert("you have clicked at X: " + e.clientX + " and Y: " + e.clientY);  
+	}
+}
+
+document.addEventListener("click", handleEvent); 
+document.addEventListener("mouseover", handleEvent); 
+document.addEventListener("mouseout", handleEvent); 
+
+
+
+
+
+
+
+</script>
+</body> 
