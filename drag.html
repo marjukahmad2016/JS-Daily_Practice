@@ -1,0 +1,35 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Draggable Content -- My Favorite part </title>
+<style>
+
+.dropZone {
+	width: 300px;
+	padding: 20px;
+	border: 2px dashed #000;
+}
+
+</style> 
+</head> 
+
+<body>
+
+<div id="dropZone" class="dropZone"> Drag </div>
+<div id="dropStatus"> </div>
+
+<script> 
+
+function handleDrag(e){
+	dropStatus.innerHTML = "You are dragging something";
+}
+
+var dropStatus = document.getElementById("dropStatus"); 
+var dropZone = document.getElementById("dropZone"); 
+
+dropZone.addEventListener("dragenter", handleDrag); 
+</script>
+
+
+</body> 
+</html>
