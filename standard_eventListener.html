@@ -1,0 +1,29 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Connecting Code to Events - the right way  </title> 
+</head> 
+<body> 
+<a id="someLink" href="www.google.com"> Click Me </a>
+
+ 
+
+<script>
+
+var link = document.getElementById("someLink"); 
+
+link.addEventListener("click", function(e){
+			alert("this link is going nowhere"); 
+			e.preventDefault(); 
+});
+
+
+
+
+//what if you want to apply another function other than changeImg on any of these handlers?
+
+
+
+
+</script>
+</body> 

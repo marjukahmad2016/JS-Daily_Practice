@@ -1,0 +1,51 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Event Listener part II  </title> 
+</head> 
+<body> 
+<img id="img0" src="usa.gif"/> 
+<div id="status"> </div>
+
+
+
+<script>
+
+var myImages = ["usa.gif", "canada.GIF", "jamaica.png", "mexico.png"]; 
+
+function changeImg(e){
+	var el = e.target; 
+	var newImgNumber = Math.round(Math.random() * 3); 
+
+	while(el.src.indexOf(myImages[newImgNumber]) != -1) {
+		newImgNumber = Math.round(Math.random() * 3);
+	}
+
+	el.src = myImages[newImgNumber]; 
+}
+
+function updateStatus(e){
+	var el = e.target; 
+	var status = document.getElementById("status"); 
+	status.innerHTML = 'The image is changed to ' + el.src; 
+
+	if(el.src.indexOf("mexico") > -1 ) {
+		el.removeEventListener("click", changeImg); 
+		el.removeEventListener("click", updateStatus); 
+	}
+}
+
+var imgObject = document.getElementById("img0"); 
+
+imgObject.addEventListener("click", changeImg);
+imgObject.addEventListener("click", updateStatus); 
+
+
+
+
+
+
+
+
+</script>
+</body> 

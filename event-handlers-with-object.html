@@ -1,0 +1,29 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Different Type of Event Handling  </title> 
+</head> 
+<body> 
+
+<a id="someLink" href="geolocation.html"> Click me </a>
+
+
+<script>
+
+//Handling event objects via object properties 
+
+
+var myImages = ["usa.gif", "canada.GIF", "jamaica.png", "mexico.png"]; 
+
+
+function linkClick() {
+	alert("this link is going nowhere"); 
+	return false; 
+}
+
+document.getElementById("someLink").onclick = linkClick; 
+
+
+
+</script>
+</body> 
