@@ -1,0 +1,23 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Using utility JS </title> 
+<script src="utility.js"> </script>
+</head> 
+<body>
+<a id="someLink" href="set_UTC.html"> Click Here </a>
+
+<script>
+
+var link = document.getElementById("somelink"); 
+
+function linkClick(e){
+	alert("This link is going nowhere"); 
+	evt.preventDefault(e); 
+}
+
+evt.addListener(link, "click", linkClick); 
+
+
+</script> 
+</body> 
