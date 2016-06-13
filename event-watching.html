@@ -1,0 +1,48 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Event Watching </title>
+</head> 
+<body>
+
+<form action=" " name="form1">
+
+<textarea rows= "15" cols= "40" name="textarea1"> </textarea>
+<textarea rows= "15" cols= "40" name="textarea2"> </textarea>
+
+<br/> 
+<input type="button" value="Clear event textarea" name="button1" /> 
+
+</form>
+    <script>
+    var myForm = document.form1; 
+    var textarea1 = myForm.textarea1; 
+    var textarea2 = myForm.textarea2; 
+    var btnClear = myForm.button1; 
+
+
+        function displayEvent(e) {
+            var message = textarea2.value;
+            message = message + e.type + "\n";
+            textarea2.value = message;
+        }
+
+        function clearEventLog(e) {
+            textarea2.value = "";
+        }
+
+
+        textarea1.addEventListener("change", displayEvent); 
+        textarea1.addEventListener("keydown", displayEvent); 
+        textarea1.addEventListener("keypress", displayEvent); 
+        textarea1.addEventListener("keyup", displayEvent); 
+        btnClear.addEventListener("click", clearEventLog); 
+
+
+    </script>
+
+
+
+
+</body> 
+</html>

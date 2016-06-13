@@ -1,0 +1,40 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Draggable Content -- My Favorite part </title>
+<style>
+
+
+
+</style> 
+</head> 
+
+<body>
+
+<form action=" " name="myForm1"> 
+	<p> This is inside form 1 </p>
+</form>
+
+<form action=" " name="myForm2"> 
+	<p> This is inside form 2 </p>
+</form>
+
+<form action=" " name="myForm3"> 
+	<p> This is inside form 3 </p>
+</form>
+
+
+<script> 
+
+var formNumbers = document.forms.length;
+
+for(var index = 0; index < formNumbers; index++){
+	alert(document.forms[index].name); 
+}
+
+</script>
+
+
+
+</body> 
+</html>
