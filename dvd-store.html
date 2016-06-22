@@ -1,0 +1,85 @@
+<!Doctype html> 
+<html lang="en"> 
+<head> 
+<title> Event Watching </title>
+</head> 
+<body>
+<form action=" " name="form1"> 
+
+<p> Tick all of the components you want included in your computer </p>
+<p> 
+<label for="chkDVD"> DVD-ROM </label>
+<input type="checkbox" id="chkDVD" name="chkDVD" value="DVD-ROM" />
+</p>
+
+<p> 
+<label for="chkBluRay"> Blu-Ray </label>
+<input type="checkbox" id="chkBluRay" name="chkBluRay" value="Blu-ray" />
+</p>
+
+<p> Select the processor speed you require </p>
+
+<p> 
+<input type="radio" name="radCpuSpeed" checked="checked" value="3.2 ghz" />
+<label> 3.2 ghz </label> 
+
+<input type="radio" name="radCpuSpeed"  value="3.7 ghz" />
+<label> 3.7 ghz </label>
+
+
+<input type="radio" name="radCpuSpeed" value="4.0 ghz" />
+<label> 4.0 ghz </label>
+
+</p>
+
+<input type="button" value="Check form" name="btnChk" /> 
+
+</form>
+
+</form>
+
+<script>
+
+var myForm = document.form1; 
+
+function radCpuSpeedClick() {
+
+}
+
+function getSelectedSpeed() {
+
+    for (var index = 0; index < myForm.radCpuSpeed.length; index++) {
+
+        if ( radCpuSpeed[index] == 1) {
+
+        return myForm.radCpuSpeed[index].value; 
+
+        }
+
+
+    }
+
+    return -1; 
+
+}
+
+function btnChkClick() {
+
+alert(" Your processor speed is: " + myForm.radCpuSpeed[0].value); 
+
+}
+
+for (var index = 0; index < myForm.radCpuSpeed.length; index++) {
+
+    myForm.radCpuSpeed[index].addEventListener("click", radCpuSpeedClick); 
+}
+
+myForm.btnChk.addEventListener("click", btnChkClick); 
+
+</script>
+
+
+
+
+</body> 
+</html>
